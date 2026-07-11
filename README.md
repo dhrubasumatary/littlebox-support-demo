@@ -74,13 +74,21 @@ npx wrangler secret put KAPSO_WEBHOOK_SECRET
 npm run deploy
 ```
 
-Webhook URL:
+### Live demo (Prompt Mafia account)
 
-```text
-https://littlebox-support-demo.<your-subdomain>.workers.dev/webhooks/kapso
+| | |
+|--|--|
+| Health | https://littlebox-support-demo.promptmafiainc.workers.dev/health |
+| Simulate (no WhatsApp) | `POST /demo/simulate` with `{ "message": "...", "phone": "91..." }` |
+| Kapso webhook | `POST /webhooks/kapso` (wired to **sandbox** number) |
+
+```bash
+curl -s -X POST https://littlebox-support-demo.promptmafiainc.workers.dev/demo/simulate \
+  -H "content-type: application/json" \
+  -d '{"message":"I ordered a dress three weeks ago. LB10234","phone":"919876543210"}'
 ```
 
-In Kapso: create webhook on the **sandbox** number → event `whatsapp.message.received` → same secret as `KAPSO_WEBHOOK_SECRET`.
+In Kapso: webhook on the **sandbox** number → event `whatsapp.message.received` → same secret as `KAPSO_WEBHOOK_SECRET`.
 
 Optional KV session memory:
 
