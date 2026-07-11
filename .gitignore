@@ -30,3 +30,7 @@ Thumbs.db
 # Local test artifacts
 coverage/
 tmp/
+
+# Prebuilt module for CF deploy (no secrets)
+!dist/
+!dist/worker.mjs
