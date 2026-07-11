@@ -1,0 +1,14 @@
+# Copy to .dev.vars (local) — never commit real values
+# Production: wrangler secret put OPENROUTER_API_KEY etc.
+
+OPENROUTER_API_KEY=sk-or-v1-your-openrouter-key
+OPENROUTER_MODEL=nvidia/nemotron-3-super-120b-a12b:free
+
+# Kapso project API key (Integrations → API keys)
+KAPSO_API_KEY=your_kapso_project_api_key
+
+# Use SANDBOX number only for this demo (not production Miithii)
+KAPSO_PHONE_NUMBER_ID=597907523413541
+
+# Must match the secret set when creating the Kapso webhook
+KAPSO_WEBHOOK_SECRET=generate_a_long_random_string

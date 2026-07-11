@@ -1,0 +1,22 @@
+name = "littlebox-support-demo"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Optional durable session memory across requests (create with: wrangler kv namespace create SESSIONS)
+# [[kv_namespaces]]
+# binding = "SESSIONS"
+# id = "REPLACE_AFTER_CREATE"
+
+[vars]
+# Non-secret defaults (override per env if needed)
+# Prefer free models with tool support. Fallback handled in agent code if rate-limited.
+OPENROUTER_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+DEMO_NAME = "Littlebox Support AI Demo"
+# Sandbox phone number id is a secret so it is not required here
+
+# Secrets (set via wrangler secret put — never commit):
+# OPENROUTER_API_KEY
+# KAPSO_API_KEY
+# KAPSO_PHONE_NUMBER_ID
+# KAPSO_WEBHOOK_SECRET

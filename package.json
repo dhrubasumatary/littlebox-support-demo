@@ -1,0 +1,23 @@
+{
+  "name": "littlebox-support-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pitch prototype: conversational WhatsApp support agent for Littlebox India (mock data only)",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "typecheck": "tsc --noEmit",
+    "test:agent": "node --experimental-strip-types scripts/test-agent.mts",
+    "check:secrets": "node scripts/check-secrets.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260708.1",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.20.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
