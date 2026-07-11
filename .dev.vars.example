@@ -12,3 +12,6 @@ KAPSO_PHONE_NUMBER_ID=597907523413541
 
 # Must match the secret set when creating the Kapso webhook
 KAPSO_WEBHOOK_SECRET=generate_a_long_random_string
+
+# SuperMemory — persistent customer memory + policy RAG
+SUPERMEMORY_API_KEY=sm_your_supermemory_key

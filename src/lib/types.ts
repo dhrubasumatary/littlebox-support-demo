@@ -32,6 +32,7 @@ export interface Env {
   KAPSO_API_KEY: string;
   KAPSO_PHONE_NUMBER_ID: string;
   KAPSO_WEBHOOK_SECRET?: string;
+  SUPERMEMORY_API_KEY?: string;
   DEMO_NAME?: string;
   SESSIONS?: KVNamespace;
 }
@@ -49,4 +50,11 @@ export interface InboundMessage {
   messageId?: string;
   conversationId?: string;
   rawType?: string;
+}
+
+export interface MessageBuffer {
+  texts: string[];
+  messageIds: string[];
+  updatedAt: number;
+  token: string;
 }
